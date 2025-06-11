@@ -11,6 +11,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "react-native";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme";
+import { Loading } from "./components/Loading";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -19,7 +20,7 @@ export function App() {
     Roboto_400Regular,
     Roboto_700Bold,
   });
-  
+
   React.useEffect(() => {
     if (loaded || error) {
       SplashScreen.hideAsync();
@@ -32,9 +33,15 @@ export function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <StatusBar
+        translucent
+        barStyle="light-content"
+        backgroundColor="transparent"
+      />
       <SafeAreaProvider>
-        <StatusBar barStyle="light-content" />
-        <SafeAreaView style={{ flex: 1 }}>
+        {!loaded ? (
+          <Loading />
+        ) : (
           <Navigation
             linking={{
               enabled: "auto",
@@ -47,7 +54,7 @@ export function App() {
               SplashScreen.hideAsync();
             }}
           />
-        </SafeAreaView>
+        )}
       </SafeAreaProvider>
     </ThemeProvider>
   );

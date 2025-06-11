@@ -9,6 +9,7 @@
     "ios": "expo run:ios"
   },
   "dependencies": {
+    "@expo-google-fonts/roboto": "^0.4.0",
     "@expo/metro-runtime": "~5.0.4",
     "@react-navigation/bottom-tabs": "^7.1.1",
     "@react-navigation/elements": "^2.2.3",
@@ -17,7 +18,8 @@
     "expo": "^53.0.4",
     "expo-asset": "~11.1.4",
     "expo-dev-client": "~5.1.7",
-    "expo-splash-screen": "~0.30.7",
+    "expo-font": "~13.3.1",
+    "expo-splash-screen": "~0.30.9",
     "expo-system-ui": "~5.0.6",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -26,7 +28,8 @@
     "react-native-gesture-handler": "~2.24.0",
     "react-native-safe-area-context": "5.3.0",
     "react-native-screens": "~4.10.0",
-    "react-native-web": "^0.20.0"
+    "react-native-web": "^0.20.0",
+    "styled-components": "^6.1.18"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

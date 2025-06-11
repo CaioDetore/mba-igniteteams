@@ -7,8 +7,7 @@ interface Props {
 export const Container = styled.View<Props>`
   width: 100%;
 
-  padding: 16px;
-  padding-top: ${p => p.insetTop + 16}px;
+  padding-top: ${p => p.insetTop}px;
 
   flex-direction: row;
   align-items: center;

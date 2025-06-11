@@ -1,18 +1,20 @@
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { BackButton, BackIcon, Container, Logo } from "./styles";
 import LogoImg from "@assets/logo.png";
+import { useNavigation } from "@react-navigation/native";
 
-type Props = {
+interface Props {
   showBackButton?: boolean;
 };
 
 export function Header({ showBackButton = true }: Props) {
+  const navigation = useNavigation()
   const insets = useSafeAreaInsets()
 
   return (
     <Container insetTop={insets.top}>
       {showBackButton && (
-        <BackButton>
+        <BackButton onPress={() => navigation.goBack()}>
           <BackIcon />
         </BackButton>
       )}

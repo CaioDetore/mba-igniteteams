@@ -1,7 +1,12 @@
 import styled from "styled-components/native";
 
-export const Container = styled.View`
+interface Props {
+  insetBottom: number
+}
+
+export const Container = styled.View<Props>`
   flex: 1;
-  align-items: center;
-  background: ${({ theme }) => theme.COLORS.GREEN_700};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_600};
+  padding: 24px;
+  padding-bottom: ${p => p.insetBottom + 24}px;
 `

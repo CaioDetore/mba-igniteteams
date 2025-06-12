@@ -5,6 +5,7 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Groups from './screens/Groups';
 import { NewGroup } from './screens/NewGroup';
+import { Players } from './screens/Players';
 
 const RootStack = createNativeStackNavigator({
   screens: {
@@ -19,6 +20,13 @@ const RootStack = createNativeStackNavigator({
       screen: NewGroup,
       options: {
         title: 'Novo Grupo',
+        headerShown: false,
+      },
+    },
+    Players: {
+      screen: Players,
+      options: {
+        title: 'Jogadores',
         headerShown: false,
       },
     },

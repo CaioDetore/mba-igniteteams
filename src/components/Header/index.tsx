@@ -9,12 +9,10 @@ interface Props {
 
 export function Header({ showBackButton = true }: Props) {
   const navigation = useNavigation()
-  const insets = useSafeAreaInsets()
-
   return (
-    <Container insetTop={insets.top}>
+    <Container>
       {showBackButton && (
-        <BackButton onPress={() => navigation.goBack()}>
+        <BackButton onPress={() => navigation.navigate('Groups')}>
           <BackIcon />
         </BackButton>
       )}

@@ -1,13 +1,8 @@
 import { CaretLeft } from "phosphor-react-native";
 import styled from "styled-components/native";
 
-interface Props {
-  insetTop: number 
-}
-export const Container = styled.View<Props>`
+export const Container = styled.View`
   width: 100%;
-
-  padding-top: ${p => p.insetTop}px;
 
   flex-direction: row;
   align-items: center;

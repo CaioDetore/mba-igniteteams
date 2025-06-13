@@ -6,8 +6,8 @@ import {
 
 import * as SplashScreen from "expo-splash-screen";
 import * as React from "react";
-import { Navigation } from "./navigation";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { Navigation, Routes } from "./navigation";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "react-native";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme";
@@ -42,18 +42,7 @@ export function App() {
         {!loaded ? (
           <Loading />
         ) : (
-          <Navigation
-            linking={{
-              enabled: "auto",
-              prefixes: [
-                // Change the scheme to match your app's scheme defined in app.json
-                "helloworld://",
-              ],
-            }}
-            onReady={() => {
-              SplashScreen.hideAsync();
-            }}
-          />
+          <Routes />
         )}
       </SafeAreaProvider>
     </ThemeProvider>

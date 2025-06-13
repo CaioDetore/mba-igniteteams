@@ -15,6 +15,10 @@ export default function Groups() {
 
   const navigation = useNavigation()
 
+  function handleNewGroup() {
+    navigation.navigate('NewGroup')
+  }
+
   return (
     <S.Container insetBottom={bottom}>
       <Header />
@@ -30,7 +34,7 @@ export default function Groups() {
       />
 
       <Button
-        onPress={() => navigation.navigate('NewGroup')}
+        onPress={handleNewGroup}
         title='Criar nova turma'
       />
     </S.Container>
